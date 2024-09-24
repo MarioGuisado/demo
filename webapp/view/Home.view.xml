@@ -30,9 +30,8 @@
                     singleContainerFullSize="false" >
                     <f:content>
                         <Label id="label1" text="Name" />
-                        <Input id="name" value="{Information>/personalInformation/lastname}" />
+                        <Input id="name" value="{Information>/personalInformation/firstname}" />
                         <Label id="label2" text="Last Name" />
-                        
                         <Input id="input" value="{Information>/personalInformation/lastname}" />
                     </f:content>
                 </f:SimpleForm>

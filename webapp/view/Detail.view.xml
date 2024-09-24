@@ -2,4 +2,5 @@
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
+    <Page id="page2" navButtonPress="onNavBack" showNavButton="true"> </Page>
 </mvc:View>

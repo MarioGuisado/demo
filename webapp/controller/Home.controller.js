@@ -18,6 +18,9 @@ function (Controller, MessageToast, MessageBox, JSONModel) {
         onClick:function(oEvent){
             MessageToast.show("Click")
             MessageBox.show("Click on Message ")
+        },
+        onView: function(oEvent){
+            var source = oEvent.getSource();
         }
     });
 });

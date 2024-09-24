@@ -8,8 +8,12 @@ sap.ui.define(
       return BaseController.extend("com.xtendhr.demo.controller.Detail", {
             onInit: function() {
             },
-            onView: function(oEvent){
-                var source = oEvent.getSource();
+            onNavBack: function(){
+                this.getRouter().navTo("RouteHome", {}, true);
+            },
+
+            getRouter: function(){
+                return this.getOwnerComponent().getRouter();
             }
         });
     }

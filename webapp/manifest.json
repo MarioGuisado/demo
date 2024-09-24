@@ -96,10 +96,8 @@
         },
         {
           "name": "Details",
-          "pattern": "",
-          "target": [
-            "TargetHome"
-          ]
+          "pattern": "Details/{objectId}",
+          "target": ["Details"]
         }
       ],
       "targets": {
