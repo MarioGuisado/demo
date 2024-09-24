@@ -1,0 +1,107 @@
+<mvc:View controllerName="com.xtendhr.demo.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+        <content> 
+            <VBox id= "vbox">
+                <Button id= "btn" text= "Click me!" type="Emphasized" icon="sap-icon://action-settings" press="onClick"> </Button>
+            </VBox>
+
+            <VBox class="sapUiSmallMargin">
+                <f:SimpleForm id="SimpleFormChange354"
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                    title="Address"
+                    labelSpanXL="3"
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="4"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    emptySpanS="0"
+                    columnsXL="1"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false" >
+                    <f:content>
+                        <Label id="label1" text="Name" />
+                        <Input id="name" value="{Information>/personalInformation/lastname}" />
+                        <Label id="label2" text="Last Name" />
+                        
+                        <Input id="input" value="{Information>/personalInformation/lastname}" />
+                    </f:content>
+                </f:SimpleForm>
+            </VBox>
+            <VBox id="vbox3">
+                <Table id="idProductsTable"
+                    fixedLayout="Strict"
+                    autoPopinMode="true"
+                    contextualWidth="Auto"
+                    growing="true"
+                    items="{
+                        path: 'odata>/Employees',
+                        sorter: {
+                            path: 'FirstName'
+                        }
+                    }">
+                   
+                    <columns>
+                        <Column
+                            width="12em">
+                            <Text text="ID" />
+                        </Column>
+                        <Column
+                            width="150px">
+                            <Text text="First Name" />
+                        </Column>
+                        <Column
+                            width="25%"
+                            hAlign="End">
+                            <Text text="Last Name" />
+                        </Column>
+                        <Column
+                            width="10rem"
+                            hAlign="Center">
+                            <Text text="Hire Date" />
+                        </Column>
+                        <Column
+                            width="10rem"
+                            hAlign="Center">
+                            <Text text="Show"/>
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem vAlign="Middle">
+                            <cells>
+                                <ObjectIdentifier id="objID"
+                                    title="{odata>EmployeeID}"
+                                    text="{odata>FirstName}"
+                                    class="sapUiTinyMarginTopBottom"/>
+                                <Text
+                                    text="{odata>FirstName}" />
+                                <Text
+                                    text="{odata>LastName}" />
+                                    
+                                <Text text="{ 
+									path: 'odata>HireDate', 
+									type: 'sap.ui.model.type.Date',
+									formatOptions: {
+											pattern: 'dd/MM/yyyy'
+									}
+								}"/>
+
+                                <Button text="{i18n>view}" press="onView"> </Button>
+                              
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>
