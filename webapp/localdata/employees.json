@@ -2,13 +2,38 @@
     "d":{
         "results":[
             {
-                "name":"Pepito", 
-                "dob":"28/11/2001"
+                "EmployeeID": 1,
+                "LastName": "Davolio",
+                "FirstName": "Nancy",
+                "Title": "Sales Representative",
+                "TitleOfCourtesy": "Ms.",
+                "BirthDate": "/Date(-664761600000)/",
+                "HireDate": "/Date(704678400000)/",
+                "Address": "507 - 20th Ave. E.\r\nApt. 2A",
+                "City": "Seattle",
+                "Region": "WA",
+                "PostalCode": "98122",
+                "Country": "USA",
+                "HomePhone": "(206) 555-9857",
+                "Extension": "5467"
             },
             {
-                "name":"Juanito", 
-                "dob":"28/11/1999"
+                "EmployeeID": 2,
+                "LastName": "Fuller",
+                "FirstName": "Andrew",
+                "Title": "Vice President, Sales",
+                "TitleOfCourtesy": "Dr.",
+                "BirthDate": "/Date(-563846400000)/",
+                "HireDate": "/Date(713750400000)/",
+                "Address": "908 W. Capital Way",
+                "City": "Tacoma",
+                "Region": "WA",
+                "PostalCode": "98401",
+                "Country": "USA",
+                "HomePhone": "(206) 555-9482",
+                "Extension": "3457"
             }
         ]
     }
 }
+

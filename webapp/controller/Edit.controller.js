@@ -5,11 +5,10 @@ sap.ui.define(
     function(BaseController) {
       "use strict";
   
-      return BaseController.extend("com.xtendhr.demo.controller.Detail", {
+      return BaseController.extend("com.xtendhr.demo.controller.Edit", {
         onInit: function() {
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-            oRouter.getRoute("Detail").attachPatternMatched(this._onRouteMatched, this);
-            console.log("init");
+            oRouter.getRoute("Edit").attachPatternMatched(this._onRouteMatched, this);
         },
         _onRouteMatched: function(oEvent){
             var objId = oEvent.getParameter("arguments").objectId;

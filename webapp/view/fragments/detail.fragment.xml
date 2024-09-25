@@ -1,0 +1,50 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+>
+
+<Panel id="panel"> 
+    <VBox class="sapUiSmallMargin">
+        <f:SimpleForm id="SimpleFormChange354"
+            editable="false"
+            layout="ResponsiveGridLayout"
+            title="View"
+            labelSpanXL="3"
+            labelSpanL="3"
+            labelSpanM="3"
+            labelSpanS="12"
+            adjustLabelSpan="false"
+            emptySpanXL="4"
+            emptySpanL="4"
+            emptySpanM="4"
+            emptySpanS="0"
+            columnsXL="1"
+            columnsL="1"
+            columnsM="1"
+            singleContainerFullSize="false" >
+            <f:content>
+                <Label id="label1" text="Product ID" />
+                <Input id="ID1" value="{odata>ProductID}"  editable="false" />
+
+                <Label id="label2" text="Product Name" />
+                <Input id="ID2" value="{odata>ProductName}"  editable="false" />
+
+                <Label id="label3" text="Quantity Per Unit" />
+                <Input id="ID3" value="{odata>QuantityPerUnit}"  editable="false" />
+
+                <Label id="label4" text="Unit Price" />
+                <Input id="ID4" value="{odata>UnitPrice}"  editable="false" />
+
+                <Label id="label5" text="Units In Stock" />
+                <Input id="ID5" value="{odata>UnitsInStock}"  editable="false" />
+
+                <Label id="label6" text="Discontinued" />
+                <Input id="ID6" value="{odata>Discontinued}"  editable="false" />
+
+            </f:content>
+        </f:SimpleForm>
+    </VBox>
+</Panel>
+</core:FragmentDefinition>

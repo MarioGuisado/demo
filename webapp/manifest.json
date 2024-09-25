@@ -16,7 +16,7 @@
       "toolsId": "06527e1f-2975-4ea2-a6db-1425e7af9b80"
     },
     "dataSources": {
-      "employeesRemote": {
+      "productsRemote": {
         "uri": "/V2/Northwind/Northwind.svc/",
         "type": "OData",
         "settings": {
@@ -64,7 +64,7 @@
         }
       },
       "odata": {
-        "dataSource": "employeesRemote",
+        "dataSource": "productsRemote",
         "preload": true,
         "settings": {}
       }
@@ -95,9 +95,14 @@
           ]
         },
         {
-          "name": "Details",
-          "pattern": "Details/{objectId}",
-          "target": ["Details"]
+          "name": "Detail",
+          "pattern": "Detail/{objectId}",
+          "target": ["Detail"]
+        },
+        {
+          "name": "Edit",
+          "pattern": "Edit/{objectId}",
+          "target": ["Edit"]
         }
       ],
       "targets": {
@@ -108,12 +113,19 @@
           "viewId": "Home",
           "viewName": "Home"
         },
-        "Details": {
+        "Detail": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "Details",
-          "viewName": "Details"
+          "viewId": "Detail",
+          "viewName": "Detail"
+        },
+        "Edit": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Edit",
+          "viewName": "Edit"
         }
       }
     },

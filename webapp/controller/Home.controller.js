@@ -1,26 +1,46 @@
-sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    "sap/m/MessageToast",
-    "sap/m/MessageBox",
-    "sap/ui/model/json/JSONModel",
-],
-function (Controller, MessageToast, MessageBox, JSONModel) {
-    "use strict";
+sap.ui.define(
+    [   
+        "com/xtendhr/demo/controller/BaseController",
+        "sap/m/MessageToast",
+        "sap/ui/model/json/JSONModel"
+    ],
+    function(BaseController, MessageToast, JSONModel) {
+      "use strict";
+  
+      return BaseController.extend("com.xtendhr.demo.controller.Detail", {
+            onInit: function() {
+                var oModel = new JSONModel();
+                oModel.loadData("/localdata/employees.json");
+                this.getView().setModel(oModel, "Information");
+                var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+                oRouter.getRoute("RouteHome").attachPatternMatched(this._onRouteMatched, this);
+            },
+            _onRouteMatched:function(){
 
-    return Controller.extend("com.xtendhr.demo.controller.Home", {
-        onInit: function () {
+            },
+            onNavBack: function(){
+                this.getRouter().navTo("RouteHome", {}, true);
+            },
 
-            //crear JSON MODEL
-            var oModel = new JSONModel();
-            oModel.loadData("/localdata/data.json")
-            this.getView().setModel(oModel, "Information");
-        },
-        onClick:function(oEvent){
-            MessageToast.show("Click")
-            MessageBox.show("Click on Message ")
-        },
-        onView: function(oEvent){
-            var source = oEvent.getSource();
-        }
-    });
-});
+            onView: function(oEvent){
+                var source = oEvent.getSource();
+                var index = source.getBindingContext("odata").getProperty("ProductID");
+                this.getRouter().navTo("Detail", {
+                    objectId: index
+                });
+            },
+            onEdit: function(oEvent){
+                var source = oEvent.getSource();
+                var index = source.getBindingContext("odata").getProperty("ProductID");
+                this.getRouter().navTo("Edit", {
+                    objectId: index
+                });
+            },
+            onCreate: function(oEvent){
+                var source = oEvent.getSource();
+            }
+            
+        });
+    }
+  );
+  

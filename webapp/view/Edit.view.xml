@@ -1,0 +1,10 @@
+<mvc:View controllerName="com.xtendhr.demo.controller.Edit"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    
+    <Page id="edit_page" navButtonPress="onNavBack" showNavButton="true">
+        <core:Fragment fragmentName="com.xtendhr.demo.view.fragments.edit" type="XML"/>
+    </Page>
+</mvc:View>
