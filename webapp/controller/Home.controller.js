@@ -1,10 +1,8 @@
 sap.ui.define(
     [   
         "com/xtendhr/demo/controller/BaseController",
-        "sap/m/MessageToast",
-        "sap/ui/model/json/JSONModel"
     ],
-    function(BaseController, MessageToast, JSONModel) {
+    function(BaseController) {
       "use strict";
   
       return BaseController.extend("com.xtendhr.demo.controller.Home", {

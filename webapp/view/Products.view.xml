@@ -21,12 +21,12 @@
                         }
                     }">
                    <headerToolbar>
-                    <OverflowToolbar id="12">
-                        <Title text="Products" level="H2"/>
-                        <ToolbarSpacer/>
-                        <Button id="createButton" text="Create" type="Emphasized" icon="sap-icon://create" press="onCreate" />
-                    </OverflowToolbar>
-			</headerToolbar>
+                        <OverflowToolbar id="12">
+                            <Title text="Products" level="H2"/>
+                            <ToolbarSpacer/>
+                            <Button id="createButton" text="Create" type="Emphasized" icon="sap-icon://create" press="onCreate" />
+                        </OverflowToolbar>
+			        </headerToolbar>
                     <columns>
                         <Column
                             width="12em">

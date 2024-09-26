@@ -9,7 +9,6 @@ sap.ui.define(
         onInit: function() {
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
             oRouter.getRoute("ProductsDetail").attachPatternMatched(this._onRouteMatched, this);
-            console.log("init");
         },
         _onRouteMatched: function(oEvent){
             var objId = oEvent.getParameter("arguments").objectId;

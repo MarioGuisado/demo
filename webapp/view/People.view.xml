@@ -5,8 +5,6 @@
 	xmlns:f="sap.ui.layout.form"
 	xmlns:core="sap.ui.core">
 
-
-
     <Page id="page12" title="{i18n>title}"  navButtonPress="onNavBack" showNavButton="true">
         <content>
             <VBox id="vboxTabla12" alignItems="Center" >
