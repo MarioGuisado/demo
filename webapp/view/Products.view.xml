@@ -39,6 +39,11 @@
                         <Column
                             width="10rem"
                             hAlign="Center">
+                            <Text text="Units in Stock"/>
+                        </Column>
+                        <Column
+                            width="10rem"
+                            hAlign="Center">
                             <Text text=""/>
                         </Column>
                         <Column
@@ -55,6 +60,8 @@
                                     class="sapUiTinyMarginTopBottom"/>
                                 <Text
                                     text="{odata>ProductName}" />
+                                <Text
+                                    text="{odata>UnitsInStock}" />
 
                                 <Button id="viewButton" text="{i18n>view}" icon="sap-icon://detail-view" press="onView"> </Button>
                                 <Button id="editButton" text= "Edit" type="Default" icon="sap-icon://edit" press="onEdit"> </Button>
