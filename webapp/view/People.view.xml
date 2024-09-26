@@ -1,0 +1,113 @@
+<mvc:View controllerName="com.xtendhr.demo.controller.People"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+
+
+
+    <Page id="page12" title="{i18n>title}"  navButtonPress="onNavBack" showNavButton="true">
+        <content>
+            <VBox id="vboxTabla12" alignItems="Center" >
+                <Table id="idProductsTable12"
+                    fixedLayout="false"
+                    autoPopinMode="true"
+                    growing="true"
+                    items="{
+                        path: '/d/results',
+                        sorter: {
+                            path: 'EmployeeID'
+                        }
+                    }">
+                   
+                    <columns>
+                        <Column
+                            width="12em">
+                            <Text text="EmployeeID" />
+                        </Column>
+                        <Column
+                            width="150px">
+                            <Text text="LastName" />
+                        </Column>
+                        <Column
+                            width="10rem"
+                            hAlign="Center">
+                            <Text text="FirstName"/>
+                        </Column>
+                        <Column
+                            width="10rem"
+                            hAlign="Center">
+                            <Text text="Title"/>
+                        </Column>
+                        <Column
+                            width="10rem"
+                            hAlign="Center">
+                            <Text text="BirthDate"/>
+                        </Column>
+                        <Column
+                            width="10rem"
+                            hAlign="Center">
+                            <Text text="Address"/>
+                        </Column>
+                        <Column
+                            width="10rem"
+                            hAlign="Center">
+                            <Text text="HomePhone"/>
+                        </Column>
+                        <Column
+                            width="10rem"
+                            hAlign="Center">
+                            <Text text="Photo"/>
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem vAlign="Middle">
+                            <cells>
+                                <ObjectIdentifier
+                                    title="{EmployeeID}"
+                                    class="sapUiTinyMarginTopBottom"/>
+                            </cells>
+                            <cells>
+                                <ObjectIdentifier id="objID2"
+                                    title="{LastName}"
+                                    class="sapUiTinyMarginTopBottom"/>
+                            </cells>
+                            <cells>
+                                <ObjectIdentifier 
+                                    title="{FirstName}"
+                                    class="sapUiTinyMarginTopBottom"/>
+                            </cells>
+                            <cells>
+                                <ObjectIdentifier 
+                                    title="{Title}"
+                                    class="sapUiTinyMarginTopBottom"/>
+                            </cells>
+                            <cells>
+                                <Text text="{path: 'BirthDate', formatter: '.formatDate'}"  />
+                            </cells>
+
+                            <cells>
+                                <ObjectIdentifier 
+                                    title="{Address}"
+                                    class="sapUiTinyMarginTopBottom"/>
+                            </cells>
+
+                            <cells>
+                                <ObjectIdentifier 
+                                    title="{HomePhone}"
+                                    class="sapUiTinyMarginTopBottom"/>
+                            </cells>
+
+                             <cells>
+                                <Image src="{path: 'Photo', formatter: '.formatImage'}" />
+                            </cells>
+
+
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

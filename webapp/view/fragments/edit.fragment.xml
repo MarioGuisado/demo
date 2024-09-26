@@ -10,7 +10,7 @@
         <f:SimpleForm id="SimpleFormChange3542"
             editable="true"
             layout="ResponsiveGridLayout"
-            title="View"
+            title="Edit"
             labelSpanXL="3"
             labelSpanL="3"
             labelSpanM="3"

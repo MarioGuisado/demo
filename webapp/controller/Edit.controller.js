@@ -8,7 +8,7 @@ sap.ui.define(
       return BaseController.extend("com.xtendhr.demo.controller.Edit", {
         onInit: function() {
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-            oRouter.getRoute("Edit").attachPatternMatched(this._onRouteMatched, this);
+            oRouter.getRoute("ProductsEdit").attachPatternMatched(this._onRouteMatched, this);
         },
         _onRouteMatched: function(oEvent){
             var objId = oEvent.getParameter("arguments").objectId;

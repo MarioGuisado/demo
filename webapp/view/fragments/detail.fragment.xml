@@ -26,22 +26,22 @@
             singleContainerFullSize="false" >
             <f:content>
                 <Label id="label1" text="Product ID" />
-                <Input id="ID1" value="{odata>ProductID}"  editable="false" />
+                <Input id="ID1" value="{odata>ProductID}"  enabled="false" />
 
                 <Label id="label2" text="Product Name" />
-                <Input id="ID2" value="{odata>ProductName}"  editable="false" />
+                <Input id="ID2" value="{odata>ProductName}"  enabled="false" />
 
                 <Label id="label3" text="Quantity Per Unit" />
-                <Input id="ID3" value="{odata>QuantityPerUnit}"  editable="false" />
+                <Input id="ID3" value="{odata>QuantityPerUnit}"  enabled="false" />
 
                 <Label id="label4" text="Unit Price" />
-                <Input id="ID4" value="{odata>UnitPrice}"  editable="false" />
+                <Input id="ID4" value="{odata>UnitPrice}"  enabled="false" />
 
                 <Label id="label5" text="Units In Stock" />
-                <Input id="ID5" value="{odata>UnitsInStock}"  editable="false" />
+                <Input id="ID5" value="{odata>UnitsInStock}"  enabled="false" />
 
                 <Label id="label6" text="Discontinued" />
-                <Input id="ID6" value="{odata>Discontinued}"  editable="false" />
+                <Input id="ID6" value="{odata>Discontinued}"  enabled="false" />
 
             </f:content>
         </f:SimpleForm>

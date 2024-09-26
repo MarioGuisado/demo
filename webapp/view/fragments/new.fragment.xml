@@ -1,0 +1,54 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+>
+
+<Panel id="panel3"> 
+    <VBox class="sapUiSmallMargin">
+        <f:SimpleForm id="SimpleFormChange35423"
+            editable="true"
+            layout="ResponsiveGridLayout"
+            title="New"
+            labelSpanXL="3"
+            labelSpanL="3"
+            labelSpanM="3"
+            labelSpanS="12"
+            adjustLabelSpan="false"
+            emptySpanXL="4"
+            emptySpanL="4"
+            emptySpanM="4"
+            emptySpanS="0"
+            columnsXL="1"
+            columnsL="1"
+            columnsM="1"
+            singleContainerFullSize="false" >
+            <f:content>
+                <Label id="label123" text="Product ID" />
+                <Input id="ID13" />
+
+                <Label id="label223" text="Product Name" />
+                <Input id="ID23" />
+
+                <Label id="label323" text="Quantity Per Unit" />
+                <Input id="ID33" />
+
+                <Label id="label423" text="Unit Price" />
+                <Input id="ID423" />
+
+                <Label id="label523" text="Units In Stock" />
+                <Input id="ID523" />
+
+                <Label id="label623" text="Discontinued" />
+                <Input id="ID623" />
+
+            </f:content>
+        </f:SimpleForm>
+    </VBox>
+    <VBox id="vbox2new" alignItems="Center">
+        <Button id="createButton2" text="Accept" type="Emphasized" icon="sap-icon://accept" press="onAccept"/>
+    </VBox>
+
+</Panel>
+</core:FragmentDefinition>

@@ -95,14 +95,29 @@
           ]
         },
         {
-          "name": "Detail",
-          "pattern": "Detail/{objectId}",
-          "target": ["Detail"]
+          "name": "Products",
+          "pattern": "Products",
+          "target": ["Products"]
         },
         {
-          "name": "Edit",
-          "pattern": "Edit/{objectId}",
-          "target": ["Edit"]
+          "name": "People",
+          "pattern": "People",
+          "target": ["People"]
+        },
+        {
+          "name": "ProductsDetail",
+          "pattern": "Products/Detail/{objectId}",
+          "target": ["ProductsDetail"]
+        },
+        {
+          "name": "ProductsEdit",
+          "pattern": "Products/Edit/{objectId}",
+          "target": ["ProductsEdit"]
+        },
+        {
+          "name": "ProductsNew",
+          "pattern": "Products/New",
+          "target": ["ProductsNew"]
         }
       ],
       "targets": {
@@ -113,19 +128,40 @@
           "viewId": "Home",
           "viewName": "Home"
         },
-        "Detail": {
+        "Products": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "Detail",
+          "viewId": "Products",
+          "viewName": "Products"
+        },
+        "People": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "People",
+          "viewName": "People"
+        },
+        "ProductsDetail": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "ProductsDetail",
           "viewName": "Detail"
         },
-        "Edit": {
+        "ProductsEdit": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "Edit",
+          "viewId": "ProductsEdit",
           "viewName": "Edit"
+        },
+        "ProductsNew": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "ProductsNew",
+          "viewName": "New"
         }
       }
     },

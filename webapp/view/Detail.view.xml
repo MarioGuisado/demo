@@ -4,7 +4,7 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core">
     
-    <Page id="page2" navButtonPress="onNavBack" showNavButton="true">
+    <Page id="page2" navButtonPress="on_nav_back_products" showNavButton="true">
         <core:Fragment fragmentName="com.xtendhr.demo.view.fragments.detail" type="XML"/>
     </Page>
 </mvc:View>
