@@ -22,16 +22,21 @@
                     <columns>
                         <Column
                             width="12em">
-                            <Text text="EmployeeID" />
+                            <Text text="Employee ID" />
                         </Column>
                         <Column
                             width="150px">
-                            <Text text="LastName" />
+                            <Text text="Last Name" />
                         </Column>
                         <Column
                             width="10rem"
                             hAlign="Center">
-                            <Text text="FirstName"/>
+                            <Text text="First Name"/>
+                        </Column>
+                        <Column
+                            width="10rem"
+                            hAlign="Center">
+                            <Text text="Full Name"/>
                         </Column>
                         <Column
                             width="10rem"
@@ -41,7 +46,7 @@
                         <Column
                             width="10rem"
                             hAlign="Center">
-                            <Text text="BirthDate"/>
+                            <Text text="Birth Date"/>
                         </Column>
                         <Column
                             width="10rem"
@@ -51,7 +56,7 @@
                         <Column
                             width="10rem"
                             hAlign="Center">
-                            <Text text="HomePhone"/>
+                            <Text text="Home Phone"/>
                         </Column>
                         <Column
                             width="10rem"
@@ -74,6 +79,11 @@
                             <cells>
                                 <ObjectIdentifier 
                                     title="{FirstName}"
+                                    class="sapUiTinyMarginTopBottom"/>
+                            </cells>
+                            <cells>
+                                <ObjectIdentifier 
+                                    title="{FirstName} {LastName}"
                                     class="sapUiTinyMarginTopBottom"/>
                             </cells>
                             <cells>

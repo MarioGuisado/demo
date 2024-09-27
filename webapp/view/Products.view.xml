@@ -60,8 +60,12 @@
                                     class="sapUiTinyMarginTopBottom"/>
                                 <Text
                                     text="{odata>ProductName}" />
-                                <Text
-                                    text="{odata>UnitsInStock}" />
+
+                                <ObjectStatus
+                                    id = "obj"
+                                    text="{odata>UnitsInStock}"
+                                    state="{= ${odata>UnitsInStock} &lt; 11 ? 'Error' : 'Success' }"/>
+                                
 
                                 <Button id="viewButton" text="{i18n>view}" icon="sap-icon://detail-view" press="onView"> </Button>
                                 <Button id="editButton" text= "Edit" type="Default" icon="sap-icon://edit" press="onEdit"> </Button>

@@ -26,24 +26,6 @@ sap.ui.define(
                     sTrimmed = value.substring(104);
                     return "data:image/bmp;base64," + sTrimmed;
                 }
-            },      
-
-            onView: function(oEvent){
-                var source = oEvent.getSource();
-                var index = source.getBindingContext("odata").getProperty("ProductID");
-                this.getRouter().navTo("ProductsDetail", {
-                    objectId: index
-                });
-            },
-            onEdit: function(oEvent){
-                var source = oEvent.getSource();
-                var index = source.getBindingContext("odata").getProperty("ProductID");
-                this.getRouter().navTo("ProductsEdit", {
-                    objectId: index
-                });
-            },
-            onCreate: function(){
-                this.getRouter().navTo("ProductsNew", {}, true);
             }
             
         });
