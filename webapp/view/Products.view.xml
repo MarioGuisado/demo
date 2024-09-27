@@ -20,21 +20,33 @@
                             path: 'ProductID'
                         }
                     }">
+                    
                    <headerToolbar>
                         <OverflowToolbar id="12">
-                            <Title text="Products" level="H2"/>
+
+                        <Label id="tableHeader2"/>
+                            <ToolbarSpacer id="toolbarSpacer2"/>
+                            <SearchField id="searchField2" width="auto" search=".onFilterProductID" placeholder="Look for a Product"/>
+
+                            <ToolbarSpacer id="toolbarSpacer3"/>
+                            <SearchField id="searchField3" width="auto" search=".onFilterProductName" placeholder="Look for a ID"/>
+
+                            <ToolbarSpacer id="toolbarSpacer"/>
+                            <SearchField id="searchField" width="auto" search=".onFilterUnitsInStock" placeholder="Look for Units in Stock" />
+
                             <ToolbarSpacer/>
-                            <Button id="createButton" text="Create" type="Emphasized" icon="sap-icon://create" press="onCreate" />
+                            <Button id="createButton" text="Create" type="Emphasized" icon="sap-icon://create" press="onCreate"/>
                         </OverflowToolbar>
 			        </headerToolbar>
+                    
                     <columns>
                         <Column
                             width="12em">
-                            <Text text="ProductID" />
+                            <Text text="Product ID" />
                         </Column>
                         <Column
                             width="150px">
-                            <Text text="ProductName" />
+                            <Text text="Product Name" />
                         </Column>
                         <Column
                             width="10rem"
