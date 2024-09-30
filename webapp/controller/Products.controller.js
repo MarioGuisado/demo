@@ -34,41 +34,35 @@ sap.ui.define(
             onCreate: function(){
                 this.getRouter().navTo("ProductsNew", {}, true);
             },
-            onFilterProductName: function (oEvent) {
-                var sQuery = oEvent.getParameter("query");
-                
-                if (sQuery) {
-                    this.oFilters.ProductName = new Filter("ProductName", FilterOperator.Contains, sQuery);
-                } else {
-                    this.oFilters.ProductName = null; 
-                }
-                
-                this._applyCombinedFilters();
-            },
             
-            onFilterProductID: function (oEvent) {
+            onFilter: function (oEvent) {
                 var sQuery = oEvent.getParameter("query");
+                var oButton = oEvent.getSource();
+
+                var sExtraValue = oButton.data("extraValue");
                 
-                if (sQuery) {
+                if(sExtraValue == "ProductID"){
                     this.oFilters.ProductID = new Filter("ProductID", FilterOperator.EQ, sQuery);
-                } else {
-                    this.oFilters.ProductID = null; 
+                    if(!sQuery){
+                        this.oFilters.ProductID = null;
+                    }
                 }
-                
+                if(sExtraValue == "UnitsInStock"){
+                    this.oFilters.UnitsInStock = new Filter("UnitsInStock", FilterOperator.EQ, sQuery);
+                    if(!sQuery){
+                        this.oFilters.UnitsInStock = null;
+                    }
+                }
+                if(sExtraValue == "ProductName"){
+                    this.oFilters.ProductName = new Filter("ProductName", FilterOperator.Contains, sQuery);
+                    if(!sQuery){
+                        this.oFilters.ProductName = null;
+                    }
+                }
+            
                 this._applyCombinedFilters();
             },
             
-            onFilterUnitsInStock: function (oEvent) {
-                var sQuery = oEvent.getParameter("query");
-                
-                if (sQuery) {
-                    this.oFilters.UnitsInStock = new Filter("UnitsInStock", FilterOperator.EQ, sQuery);
-                } else {
-                    this.oFilters.UnitsInStock = null; 
-                }
-                
-                this._applyCombinedFilters();
-            },
             _applyCombinedFilters: function () {
                 var aFilter = [];
             
@@ -88,14 +82,6 @@ sap.ui.define(
                 oBinding.filter(aFilter, "Application");
             }
             
-            
-            
-            
-            
-            
-            
-            
         });
     }
   );
-  
